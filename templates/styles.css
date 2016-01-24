@@ -1,27 +1,21 @@
-html {
-    background-color:black;
-}
 
-body {
-    color: white;
-}
 form input {
-        background-color: #ffffe0;
+    background-color: #ffffe0; /*light yellow*/
 }
 
-#lname {
-        font-weight: bold;
+#last-name {
+    font-weight: bold;
 
 }
 
 h1 {
+    font-family:"Lucida Console",Monaco,monospace;
     text-align: center;
-    font-family: Impact;
     text-decoration: underline;
     color: #33cc33;
 }
 
 p {
-    font-size: 15pt;
+    font-family:"Lucida Console",Monaco,monospace;
     border: 2px dashed #e68a00;
 }
