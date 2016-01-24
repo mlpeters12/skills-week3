@@ -1,1 +1,20 @@
-/*your CSS goes here*/
+form input {
+        background-color: yellow;
+}
+
+#lname {
+        font-weight: bold;
+
+}
+
+h1 {
+    text-align: center;
+    font-family: Impact;
+    text-decoration: underline;
+    color: #33cc33;
+}
+
+p {
+    font-size: 15pt;
+    border: 2px dashed #e68a00;
+}
