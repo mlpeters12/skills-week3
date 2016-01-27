@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import jinja2
 
 app = Flask(__name__)
@@ -12,28 +12,21 @@ def form_page():
 
 
 
-@app.route("/application", methods="POST")
+@app.route('/application', methods=["POST"])
 def index_page():
     
 
-    first_name = request.form.get(fname)
-    last_name = request.form.get(lname)
-    salary = request.form.get(salary)
-    position = request.form.get(position)
+    first_name = request.form.get("fname")
+    last_name = request.form.get("lname")
+    salary = request.form.get("salary")
+    position = request.form.get("position")
 
 
-    return """
-
-    <!doctype html>
-    <html>
-        <head>
-            <title>Thank you!</title>
-        </head>
-        <body>
-            <div "Thank you %s %s, for applying to be a %s. Your minimum salary requirement is $%s dollars." 
-            </div> 
-        </body>
-    </html>""" %(first_name,last,position,salary)
+    return render_template("app_final.html",
+                            firstname = first_name,
+                            lastname = last_name,
+                            salary = salary,
+                            position = position)
 
     
 #     # Alternately, we could make this a Jinja template in `templates/`
